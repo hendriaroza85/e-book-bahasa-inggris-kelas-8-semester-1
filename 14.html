@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujian Akhir Semester | Bahasa Inggris Kelas VIII</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #0f172a;
+            --primary-light: #1e293b;
+            --accent-gold: #d4af37;
+            --accent-gold-light: #f3e5ab;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+            --glass-bg: rgba(30, 41, 59, 0.8);
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+
+        /* Navigation */
+        .top-nav {
+            background: var(--primary-light);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-links a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links a:hover { color: var(--accent-gold-light); transform: translateX(3px); }
+        .nav-center { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--text-light); }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        /* Header Section */
+        .exam-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2.5rem;
+            background: var(--glass-bg);
+            border-radius: 16px;
+            border: 2px solid var(--accent-gold);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .exam-icon { font-size: 3rem; color: var(--accent-gold); margin-bottom: 1rem; }
+        .exam-label { 
+            color: var(--accent-gold); 
+            font-weight: 700; 
+            letter-spacing: 3px; 
+            text-transform: uppercase; 
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .exam-title { 
+            font-size: 2.5rem; 
+            margin: 0.5rem 0 1rem; 
+            background: linear-gradient(to right, #fff, #d4af37); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .exam-info { 
+            color: var(--text-muted); 
+            max-width: 700px; 
+            margin: 0 auto; 
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .exam-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .meta-item i { color: var(--accent-gold); }
+
+        /* Author Box */
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .author-box i { color: var(--accent-gold); }
+        .author-box span { font-weight: 600; color: var(--text-light); }
+        .author-box small { color: var(--text-muted); display: block; font-weight: 400; }
+
+        /* Content Sections */
+        .content-section {
+            background: var(--primary-light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .section-desc {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .instruction-box {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--accent-gold);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .instruction-box h4 {
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .instruction-box ul {
+            margin-left: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .instruction-box li {
+            margin-bottom: 0.3rem;
+        }
+
+        /* Form Elements */
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { 
+            display: block; 
+            margin-bottom: 0.5rem; 
+            color: var(--accent-gold); 
+            font-weight: 600; 
+            font-size: 0.9rem; 
+        }
+        .form-control {
+            width: 100%;
+            padding: 0.875rem;
+            background: var(--primary-dark);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            color: var(--text-light);
+            font-family: 'Montserrat', sans-serif;
+            transition: var(--transition);
+        }
+        .form-control:focus { 
+            outline: none; 
+            border-color: var(--accent-gold); 
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); 
+        }
+        select.form-control { cursor: pointer; }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        /* Question Blocks */
+        .question-block {
+            background: var(--primary-dark);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .question-text { 
+            font-weight: 600; 
+            color: var(--text-light); 
+            font-size: 1.05rem;
+            flex: 1;
+        }
+
+        .points-badge { 
+            background: var(--accent-gold); 
+            color: var(--primary-dark); 
+            padding: 0.2rem 0.6rem; 
+            border-radius: 4px; 
+            font-size: 0.75rem; 
+            font-weight: 700;
+            white-space: nowrap;
+            margin-left: 1rem;
+        }
+
+        .question-number {
+            color: var(--accent-gold);
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+
+        /* Multiple Choice Options */
+        .options label {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--text-muted);
+        }
+
+        .options label:hover { 
+            background: rgba(212, 175, 55, 0.05); 
+            color: var(--text-light); 
+        }
+
+        .options input[type="radio"] { 
+            margin-top: 0.25rem; 
+            accent-color: var(--accent-gold); 
+        }
+
+        .options input[type="checkbox"] { 
+            margin-top: 0.25rem; 
+            accent-color: var(--accent-gold); 
+        }
+
+        /* Complex Multiple Choice */
+        .complex-options {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 0.75rem;
+        }
+
+        .complex-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .complex-item:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .complex-item input[type="checkbox"] {
+            accent-color: var(--accent-gold);
+        }
+
+        /* True/False */
+        .true-false-options {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.75rem;
+        }
+
+        .tf-option {
+            flex: 1;
+        }
+
+        .tf-option label {
+            display: block;
+            padding: 0.75rem;
+            text-align: center;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .tf-option input[type="radio"] {
+            margin-right: 0.5rem;
+            accent-color: var(--accent-gold);
+        }
+
+        .tf-option.true label {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid var(--success);
+            color: var(--success);
+        }
+
+        .tf-option.false label {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid var(--danger);
+            color: var(--danger);
+        }
+
+        .tf-option label:hover {
+            opacity: 0.8;
+        }
+
+        /* Matching Section */
+        .matching-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .matching-column {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .matching-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem;
+            margin-bottom: 0.75rem;
+            background: var(--primary-dark);
+            border-radius: 6px;
+        }
+
+        .matching-number {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+
+        .matching-text {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .matching-select {
+            width: 100%;
+            padding: 0.5rem;
+            background: var(--primary-dark);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 4px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .matching-select:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        /* Results Box */
+        .results-box {
+            background: rgba(15, 23, 42, 0.8);
+            border: 2px solid var(--accent-gold);
+            border-radius: 12px;
+            padding: 2.5rem;
+            text-align: center;
+            margin: 3rem 0;
+            display: none;
+        }
+
+        .results-box.active { 
+            display: block; 
+            animation: fadeIn 0.5s ease; 
+        }
+
+        .results-title {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+        }
+
+        .score-display { 
+            font-size: 4rem; 
+            font-family: 'Playfair Display', serif; 
+            color: var(--accent-gold); 
+            font-weight: 700; 
+            margin: 1.5rem 0;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .score-breakdown { 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .score-item {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-gold);
+        }
+
+        .score-label {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .score-value {
+            color: var(--text-light);
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        /* Buttons */
+        .btn-group { 
+            display: flex; 
+            gap: 1rem; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            margin-top: 2rem; 
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .btn-primary { 
+            background: var(--accent-gold); 
+            color: var(--primary-dark);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover { 
+            background: var(--accent-gold-light); 
+            transform: translateY(-2px); 
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary { 
+            background: transparent; 
+            border: 1px solid var(--accent-gold); 
+            color: var(--accent-gold); 
+        }
+
+        .btn-secondary:hover { 
+            background: rgba(212, 175, 55, 0.1); 
+        }
+
+        .btn-danger { 
+            background: var(--danger); 
+            color: white; 
+        }
+
+        .btn-danger:hover { 
+            background: #dc2626; 
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            background: var(--primary-light);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(to right, var(--accent-gold), var(--accent-gold-light));
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        /* Footer */
+        .exam-footer {
+            text-align: center;
+            padding: 3rem 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin-top: 4rem;
+            color: var(--text-muted);
+        }
+
+        .footer-links { 
+            display: flex; 
+            justify-content: center; 
+            gap: 1.5rem; 
+            margin-bottom: 1.5rem; 
+            flex-wrap: wrap; 
+        }
+
+        .footer-links a { 
+            color: var(--accent-gold); 
+            text-decoration: none; 
+            font-weight: 500; 
+            transition: var(--transition); 
+        }
+
+        .footer-links a:hover { 
+            color: var(--accent-gold-light); 
+        }
+
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translateY(20px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+
+        @media (max-width: 768px) {
+            .top-nav { flex-direction: column; gap: 1rem; text-align: center; }
+            .exam-title { font-size: 1.8rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+            .matching-container { grid-template-columns: 1fr; }
+            .exam-meta { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-links">
+            <a href="13.html"><i class="fas fa-arrow-left"></i> Pertemuan 13</a>
+        </div>
+        <div class="nav-center">Ujian Akhir Semester</div>
+        <div class="nav-links">
+            <a href="index.html">📖 Daftar Isi <i class="fas fa-home"></i></a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Exam Header -->
+        <header class="exam-header">
+            <div class="exam-icon">🏆</div>
+            <span class="exam-label">— Ujian Akhir Semester —</span>
+            <h1 class="exam-title">Bahasa Inggris Kelas VIII</h1>
+            <p class="exam-info">
+                Ujian komprehensif ini mencakup seluruh materi Pertemuan 1-13: 
+                The Champion of Panjat Pinang, Regular and Irregular Verbs, Simple Past Tense, 
+                Recount Text, serta Narrative Text (Fable, Fairytale, dan Folktale).
+            </p>
+            <div class="exam-meta">
+                <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Waktu: 120 Menit</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-list-ol"></i>
+                    <span>Total Soal: 50</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-award"></i>
+                    <span>Skor Maksimal: 100</span>
+                </div>
+            </div>
+            <div class="author-box">
+                <div>
+                    <i class="fas fa-chalkboard-teacher"></i> <span>Yuni Rahmi, S.Pd</span>
+                    <small>MTsN 10 Agam</small>
+                </div>
+            </div>
+        </header>
+
+        <!-- Student Identity -->
+        <div class="content-section">
+            <h3 class="section-title"><i class="fas fa-id-card"></i> Identitas Siswa</h3>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Nama Lengkap *</label>
+                    <input type="text" id="studentName" class="form-control" required placeholder="Masukkan nama lengkap">
+                </div>
+                <div class="form-group">
+                    <label>No. Absen / NIS *</label>
+                    <input type="text" id="studentNIS" class="form-control" required placeholder="Contoh: 12345">
+                </div>
+                <div class="form-group">
+                    <label>Kelas *</label>
+                    <select id="studentClass" class="form-control" required>
+                        <option value="">Pilih Kelas</option>
+                        <option value="VIII-A">VIII-A</option>
+                        <option value="VIII-B">VIII-B</option>
+                        <option value="VIII-C">VIII-C</option>
+                        <option value="VIII-D">VIII-D</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Semester *</label>
+                    <select id="studentSemester" class="form-control" required>
+                        <option value="1 (Ganjil)">1 (Ganjil)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-header">
+                <span>Progres Pengerjaan</span>
+                <span id="progressText">0/50 Soal Terjawab</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <!-- Part A: Multiple Choice (35 soal) -->
+        <div class="content-section">
+            <h3 class="section-title"><i class="fas fa-list-ol"></i> Bagian A: Pilihan Ganda</h3>
+            <div class="section-desc">
+                Pilihlah satu jawaban yang paling tepat! (35 soal × 2 poin = 70 poin)
+            </div>
+            <div class="instruction-box">
+                <h4><i class="fas fa-info-circle"></i> Petunjuk:</h4>
+                <ul>
+                    <li>Pilih satu jawaban (A, B, C, atau D) yang paling benar</li>
+                    <li>Setiap soal bernilai 2 poin</li>
+                    <li>Total skor Bagian A: 70 poin</li>
+                </ul>
+            </div>
+
+            <div id="mcqContainer">
+                <!-- Pertemuan 1-2: Panjat Pinang -->
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">1.</span> What is the text "The Champion of Panjat Pinang" mainly about?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="A"> A. A traditional climbing competition</label>
+                        <label><input type="radio" name="q1" value="B"> B. A football match</label>
+                        <label><input type="radio" name="q1" value="C"> C. A cooking contest</label>
+                        <label><input type="radio" name="q1" value="D"> D. A singing competition</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">2.</span> "I think it was very exciting!" This sentence is an expression of...</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="A"> A. Asking for help</label>
+                        <label><input type="radio" name="q2" value="B"> B. Giving opinion</label>
+                        <label><input type="radio" name="q2" value="C"> C. Refusing an invitation</label>
+                        <label><input type="radio" name="q2" value="D"> D. Apologizing</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">3.</span> How do you pronounce the '-ed' ending in the word "climbed"?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="A"> A. /ɪd/</label>
+                        <label><input type="radio" name="q3" value="B"> B. /t/</label>
+                        <label><input type="radio" name="q3" value="C"> C. /d/</label>
+                        <label><input type="radio" name="q3" value="D"> D. /ed/</label>
+                    </div>
+                </div>
+
+                <!-- Pertemuan 3: Verbs -->
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">4.</span> Which of the following is an irregular verb?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="A"> A. played</label>
+                        <label><input type="radio" name="q4" value="B"> B. watched</label>
+                        <label><input type="radio" name="q4" value="C"> C. went</label>
+                        <label><input type="radio" name="q4" value="D"> D. studied</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">5.</span> What is the past form (V2) of "buy"?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="A"> A. buyed</label>
+                        <label><input type="radio" name="q5" value="B"> B. bought</label>
+                        <label><input type="radio" name="q5" value="C"> C. buying</label>
+                        <label><input type="radio" name="q5" value="D"> D. buys</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">6.</span> What is the V2 form of "write"?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="A"> A. writed</label>
+                        <label><input type="radio" name="q6" value="B"> B. wrote</label>
+                        <label><input type="radio" name="q6" value="C"> C. written</label>
+                        <label><input type="radio" name="q6" value="D"> D. writing</label>
+                    </div>
+                </div>
+
+                <!-- Pertemuan 4: Simple Past Tense -->
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">7.</span> "She _____ to the market yesterday." The correct verb is...</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="A"> A. go</label>
+                        <label><input type="radio" name="q7" value="B"> B. goes</label>
+                        <label><input type="radio" name="q7" value="C"> C. went</label>
+                        <label><input type="radio" name="q7" value="D"> D. going</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">8.</span> "They _____ happy last night." This sentence uses...</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="A"> A. was</label>
+                        <label><input type="radio" name="q8" value="B"> B. were</label>
+                        <label><input type="radio" name="q8" value="C"> C. are</label>
+                        <label><input type="radio" name="q8" value="D"> D. is</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">9.</span> "_____ you watch the match last night?" The correct auxiliary verb is...</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q9" value="A"> A. Do</label>
+                        <label><input type="radio" name="q9" value="B"> B. Does</label>
+                        <label><input type="radio" name="q9" value="C"> C. Did</label>
+                        <label><input type="radio" name="q9" value="D"> D. Were</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">10.</span> Which sentence is in the correct negative form of Simple Past Tense?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q10" value="A"> A. She didn't went to school</label>
+                        <label><input type="radio" name="q10" value="B"> B. She didn't go to school</label>
+                        <label><input type="radio" name="q10" value="C"> C. She doesn't go to school</label>
+                        <label><input type="radio" name="q10" value="D"> D. She wasn't go to school</label>
+                    </div>
+                </div>
+
+                <!-- Pertemuan 5-6: Recount Text -->
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">11.</span> What is the social function of Recount Text?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q11" value="A"> A. To describe a particular place</label>
+                        <label><input type="radio" name="q11" value="B"> B. To retell past events</label>
+                        <label><input type="radio" name="q11" value="C"> C. To explain how to make something</label>
+                        <label><input type="radio" name="q11" value="D"> D. To amuse the reader with a story</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">12.</span> Which part of Recount Text tells about who, when, and where?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q12" value="A"> A. Events</label>
+                        <label><input type="radio" name="q12" value="B"> B. Reorientation</label>
+                        <label><input type="radio" name="q12" value="C"> C. Orientation</label>
+                        <label><input type="radio" name="q12" value="D"> D. Complication</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">13.</span> Which word is a temporal conjunction?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q13" value="A"> A. Because</label>
+                        <label><input type="radio" name="q13" value="B"> B. Although</label>
+                        <label><input type="radio" name="q13" value="C"> C. Then</label>
+                        <label><input type="radio" name="q13" value="D"> D. But</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">14.</span> What is the generic structure of Recount Text?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q14" value="A"> A. Orientation - Complication - Resolution</label>
+                        <label><input type="radio" name="q14" value="B"> B. Orientation - Events - Reorientation</label>
+                        <label><input type="radio" name="q14" value="C"> C. Goal - Materials - Steps</label>
+                        <label><input type="radio" name="q14" value="D"> D. Identification - Description</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">15.</span> What tense is mostly used in Recount Text?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q15" value="A"> A. Simple Present Tense</label>
+                        <label><input type="radio" name="q15" value="B"> B. Simple Past Tense</label>
+                        <label><input type="radio" name="q15" value="C"> C. Present Continuous Tense</label>
+                        <label><input type="radio" name="q15" value="D"> D. Future Tense</label>
+                    </div>
+                </div>
+
+                <!-- Pertemuan 8-10: Narrative Text / Fable -->
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">16.</span> What type of text is "The Ant and The Dove"?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q16" value="A"> A. Recount Text</label>
+                        <label><input type="radio" name="q16" value="B"> B. Descriptive Text</label>
+                        <label><input type="radio" name="q16" value="C"> C. Narrative Text / Fable</label>
+                        <label><input type="radio" name="q16" value="D"> D. Procedure Text</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">17.</span> How did the dove help the ant in "The Ant and The Dove"?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q17" value="A"> A. The dove pulled the ant out of the water</label>
+                        <label><input type="radio" name="q17" value="B"> B. The dove called for help</label>
+                        <label><input type="radio" name="q17" value="C"> C. The dove dropped a leaf into the water</label>
+                        <label><input type="radio" name="q17" value="D"> D. The dove carried the ant on her back</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">18.</span> What is the moral value of "The Ant and The Dove"?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q18" value="A"> A. Never trust strangers</label>
+                        <label><input type="radio" name="q18" value="B"> B. One good turn deserves another</label>
+                        <label><input type="radio" name="q18" value="C"> C. Slow and steady wins the race</label>
+                        <label><input type="radio" name="q18" value="D"> D. Hard work always pays off</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">19.</span> In "Androcles and The Lion", how did Androcles help the lion?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q19" value="A"> A. He gave the lion some food</label>
+                        <label><input type="radio" name="q19" value="B"> B. He pulled out the thorn from the lion's paw</label>
+                        <label><input type="radio" name="q19" value="C"> C. He built a house for the lion</label>
+                        <label><input type="radio" name="q19" value="D"> D. He fought with other animals</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">20.</span> In "The Lion and The Mouse", how did the mouse save the lion?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q20" value="A"> A. By calling other animals</label>
+                        <label><input type="radio" name="q20" value="B"> B. By attacking the hunters</label>
+                        <label><input type="radio" name="q20" value="C"> C. By bringing food to the lion</label>
+                        <label><input type="radio" name="q20" value="D"> D. By gnawing away the ropes</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">21.</span> What makes a Fable different from other types of narrative text?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q21" value="A"> A. It uses Simple Present Tense</label>
+                        <label><input type="radio" name="q21" value="B"> B. It has no moral value</label>
+                        <label><input type="radio" name="q21" value="C"> C. The characters are animals that behave like humans</label>
+                        <label><input type="radio" name="q21" value="D"> D. It is always a true story</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">22.</span> "Once upon a time, a mighty lion was sleeping..." The synonym of "mighty" is...</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q22" value="A"> A. Weak</label>
+                        <label><input type="radio" name="q22" value="B"> B. Powerful</label>
+                        <label><input type="radio" name="q22" value="C"> C. Small</label>
+                        <label><input type="radio" name="q22" value="D"> D. Sleepy</label>
+                    </div>
+                </div>
+
+                <!-- Pertemuan 11: Fairytale -->
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">23.</span> What type of text is "A Brave Girl"?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q23" value="A"> A. Recount Text</label>
+                        <label><input type="radio" name="q23" value="B"> B. Descriptive Text</label>
+                        <label><input type="radio" name="q23" value="C"> C. Narrative Text / Fairytale</label>
+                        <label><input type="radio" name="q23" value="D"> D. Procedure Text</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">24.</span> What was Maya known for in "A Brave Girl"?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q24" value="A"> A. Her strength and height</label>
+                        <label><input type="radio" name="q24" value="B"> B. Her sharp mind and brave heart</label>
+                        <label><input type="radio" name="q24" value="C"> C. Her wealth and beauty</label>
+                        <label><input type="radio" name="q24" value="D"> D. Her magical powers</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">25.</span> How did Maya solve the problem in "A Brave Girl"?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q25" value="A"> A. She used magic</label>
+                        <label><input type="radio" name="q25" value="B"> B. She called the police</label>
+                        <label><input type="radio" name="q25" value="C"> C. She bravely threw a net and tied the tiger</label>
+                        <label><input type="radio" name="q25" value="D"> D. She ran away</label>
+                    </div>
+                </div>
+
+                <!-- Pertemuan 12-13: Folktale -->
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">26.</span> What type of text is "The Wise Man"?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q26" value="A"> A. Recount Text</label>
+                        <label><input type="radio" name="q26" value="B"> B. Descriptive Text</label>
+                        <label><input type="radio" name="q26" value="C"> C. Narrative Text / Folktale</label>
+                        <label><input type="radio" name="q26" value="D"> D. Procedure Text</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">27.</span> What is the moral value of "The Wise Man"?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q27" value="A"> A. Always drink water from a lake</label>
+                        <label><input type="radio" name="q27" value="B"> B. Salt is bad for health</label>
+                        <label><input type="radio" name="q27" value="C"> C. Broaden your mind and heart to handle life's problems</label>
+                        <label><input type="radio" name="q27" value="D"> D. Never complain to old people</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">28.</span> In "The Brave Knight", how did Sir Arthur solve the problem?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q28" value="A"> A. He killed the dragon</label>
+                        <label><input type="radio" name="q28" value="B"> B. He proposed a peaceful solution to provide food and a safe cave</label>
+                        <label><input type="radio" name="q28" value="C"> C. He chased the dragon away</label>
+                        <label><input type="radio" name="q28" value="D"> D. He trapped the dragon</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">29.</span> What is the moral value of "The Brave Knight"?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q29" value="A"> A. Violence is the best way</label>
+                        <label><input type="radio" name="q29" value="B"> B. Dragons are dangerous</label>
+                        <label><input type="radio" name="q29" value="C"> C. Wisdom and compassion are the greatest weapons of a true hero</label>
+                        <label><input type="radio" name="q29" value="D"> D. Kings always know best</label>
+                    </div>
+                </div>
+
+                <!-- Campuran Structure & Language Features -->
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">30.</span> Which part of Narrative Text tells about the problem in the story?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q30" value="A"> A. Orientation</label>
+                        <label><input type="radio" name="q30" value="B"> B. Complication</label>
+                        <label><input type="radio" name="q30" value="C"> C. Resolution</label>
+                        <label><input type="radio" name="q30" value="D"> D. Coda</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">31.</span> Which phrase is commonly used to start a fairytale?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q31" value="A"> A. "Last week, I went to..."</label>
+                        <label><input type="radio" name="q31" value="B"> B. "Once upon a time..."</label>
+                        <label><input type="radio" name="q31" value="C"> C. "First, prepare the materials..."</label>
+                        <label><input type="radio" name="q31" value="D"> D. "In my opinion..."</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">32.</span> "The villagers were terrified." The synonym of "terrified" is...</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q32" value="A"> A. Happy</label>
+                        <label><input type="radio" name="q32" value="B"> B. Very scared</label>
+                        <label><input type="radio" name="q32" value="C"> C. Angry</label>
+                        <label><input type="radio" name="q32" value="D"> D. Confused</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">33.</span> "Life is so hard!" This sentence is an expression of...</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q33" value="A"> A. Giving advice</label>
+                        <label><input type="radio" name="q33" value="B"> B. Complaining</label>
+                        <label><input type="radio" name="q33" value="C"> C. Apologizing</label>
+                        <label><input type="radio" name="q33" value="D"> D. Thanking</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">34.</span> The king was <u>furious</u> in "The Brave Knight". The synonym of "furious" is...</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q34" value="A"> A. Very happy</label>
+                        <label><input type="radio" name="q34" value="B"> B. Very angry</label>
+                        <label><input type="radio" name="q34" value="C"> C. Very sad</label>
+                        <label><input type="radio" name="q34" value="D"> D. Very surprised</label>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">35.</span> Which expression shows offering help?</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="options">
+                        <label><input type="radio" name="q35" value="A"> A. "Thank you so much!"</label>
+                        <label><input type="radio" name="q35" value="B"> B. "I can't believe it!"</label>
+                        <label><input type="radio" name="q35" value="C"> C. "Let me help you."</label>
+                        <label><input type="radio" name="q35" value="D"> D. "I will never forget you."</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Part B: Complex Multiple Choice (5 soal) -->
+        <div class="content-section">
+            <h3 class="section-title"><i class="fas fa-tasks"></i> Bagian B: Pilihan Ganda Kompleks</h3>
+            <div class="section-desc">
+                Pilihlah lebih dari satu jawaban yang benar! (5 soal × 3 poin = 15 poin)
+            </div>
+            <div class="instruction-box">
+                <h4><i class="fas fa-info-circle"></i> Petunjuk:</h4>
+                <ul>
+                    <li>Pilih semua jawaban yang benar (bisa lebih dari satu)</li>
+                    <li>Setiap soal bernilai 3 poin</li>
+                    <li>Total skor Bagian B: 15 poin</li>
+                </ul>
+            </div>
+
+            <div id="complexContainer">
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">36.</span> Which of the following are irregular verbs? (Choose 3)</div>
+                        <span class="points-badge">3 POIN</span>
+                    </div>
+                    <div class="complex-options">
+                        <div class="complex-item"><input type="checkbox" name="q36" value="A" id="q36a"><label for="q36a">A. go - went - gone</label></div>
+                        <div class="complex-item"><input type="checkbox" name="q36" value="B" id="q36b"><label for="q36b">B. play - played - played</label></div>
+                        <div class="complex-item"><input type="checkbox" name="q36" value="C" id="q36c"><label for="q36c">C. eat - ate - eaten</label></div>
+                        <div class="complex-item"><input type="checkbox" name="q36" value="D" id="q36d"><label for="q36d">D. watch - watched - watched</label></div>
+                        <div class="complex-item"><input type="checkbox" name="q36" value="E" id="q36e"><label for="q36e">E. write - wrote - written</label></div>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">37.</span> Which are the language features of Narrative Text? (Choose 3)</div>
+                        <span class="points-badge">3 POIN</span>
+                    </div>
+                    <div class="complex-options">
+                        <div class="complex-item"><input type="checkbox" name="q37" value="A" id="q37a"><label for="q37a">A. Using Simple Past Tense</label></div>
+                        <div class="complex-item"><input type="checkbox" name="q37" value="B" id="q37b"><label for="q37b">B. Using temporal conjunctions</label></div>
+                        <div class="complex-item"><input type="checkbox" name="q37" value="C" id="q37c"><label for="q37c">C. Using action verbs</label></div>
+                        <div class="complex-item"><input type="checkbox" name="q37" value="D" id="q37d"><label for="q37d">D. Using imperative sentences</label></div>
+                        <div class="complex-item"><input type="checkbox" name="q37" value="E" id="q37e"><label for="q37e">E. Using Simple Present Tense</label></div>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">38.</span> Which are the parts of Narrative Text structure? (Choose 3)</div>
+                        <span class="points-badge">3 POIN</span>
+                    </div>
+                    <div class="complex-options">
+                        <div class="complex-item"><input type="checkbox" name="q38" value="A" id="q38a"><label for="q38a">A. Orientation</label></div>
+                        <div class="complex-item"><input type="checkbox" name="q38" value="B" id="q38b"><label for="q38b">B. Complication</label></div>
+                        <div class="complex-item"><input type="checkbox" name="q38" value="C" id="q38c"><label for="q38c">C. Events</label></div>
+                        <div class="complex-item"><input type="checkbox" name="q38" value="D" id="q38d"><label for="q38d">D. Resolution</label></div>
+                        <div class="complex-item"><input type="checkbox" name="q38" value="E" id="q38e"><label for="q38e">E. Reorientation</label></div>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">39.</span> Which are tips for speaking a narrative story? (Choose 3)</div>
+                        <span class="points-badge">3 POIN</span>
+                    </div>
+                    <div class="complex-options">
+                        <div class="complex-item"><input type="checkbox" name="q39" value="A" id="q39a"><label for="q39a">A. Use clear pronunciation</label></div>
+                        <div class="complex-item"><input type="checkbox" name="q39" value="B" id="q39b"><label for="q39b">B. Speak as fast as possible</label></div>
+                        <div class="complex-item"><input type="checkbox" name="q39" value="C" id="q39c"><label for="q39c">C. Use gestures and expressions</label></div>
+                        <div class="complex-item"><input type="checkbox" name="q39" value="D" id="q39d"><label for="q39d">D. Avoid eye contact</label></div>
+                        <div class="complex-item"><input type="checkbox" name="q39" value="E" id="q39e"><label for="q39e">E. Use different voices for characters</label></div>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">40.</span> Which words are time signals for Simple Past Tense? (Choose 3)</div>
+                        <span class="points-badge">3 POIN</span>
+                    </div>
+                    <div class="complex-options">
+                        <div class="complex-item"><input type="checkbox" name="q40" value="A" id="q40a"><label for="q40a">A. yesterday</label></div>
+                        <div class="complex-item"><input type="checkbox" name="q40" value="B" id="q40b"><label for="q40b">B. tomorrow</label></div>
+                        <div class="complex-item"><input type="checkbox" name="q40" value="C" id="q40c"><label for="q40c">C. last week</label></div>
+                        <div class="complex-item"><input type="checkbox" name="q40" value="D" id="q40d"><label for="q40d">D. now</label></div>
+                        <div class="complex-item"><input type="checkbox" name="q40" value="E" id="q40e"><label for="q40e">E. two days ago</label></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Part C: True/False (5 soal) -->
+        <div class="content-section">
+            <h3 class="section-title"><i class="fas fa-check-circle"></i> Bagian C: Benar/Salah</h3>
+            <div class="section-desc">
+                Tentukan apakah pernyataan berikut Benar (B) atau Salah (S)! (5 soal × 2 poin = 10 poin)
+            </div>
+            <div class="instruction-box">
+                <h4><i class="fas fa-info-circle"></i> Petunjuk:</h4>
+                <ul>
+                    <li>Pilih "Benar" jika pernyataan sesuai dengan fakta/konsep</li>
+                    <li>Pilih "Salah" jika pernyataan tidak sesuai</li>
+                    <li>Setiap soal bernilai 2 poin</li>
+                    <li>Total skor Bagian C: 10 poin</li>
+                </ul>
+            </div>
+
+            <div id="trueFalseContainer">
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">41.</span> Regular verbs form their past tense by adding -ed or -d to the base form.</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="true-false-options">
+                        <div class="tf-option true"><input type="radio" name="q41" value="B" id="q41b"><label for="q41b">BENAR</label></div>
+                        <div class="tf-option false"><input type="radio" name="q41" value="S" id="q41s"><label for="q41s">SALAH</label></div>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">42.</span> In negative sentences of Simple Past Tense, we use V2 after "didn't".</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="true-false-options">
+                        <div class="tf-option true"><input type="radio" name="q42" value="B" id="q42b"><label for="q42b">BENAR</label></div>
+                        <div class="tf-option false"><input type="radio" name="q42" value="S" id="q42s"><label for="q42s">SALAH</label></div>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">43.</span> Recount Text uses Simple Present Tense as its main tense.</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="true-false-options">
+                        <div class="tf-option true"><input type="radio" name="q43" value="B" id="q43b"><label for="q43b">BENAR</label></div>
+                        <div class="tf-option false"><input type="radio" name="q43" value="S" id="q43s"><label for="q43s">SALAH</label></div>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">44.</span> "Was" is used for singular subjects (I, He, She, It) in Simple Past Tense.</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="true-false-options">
+                        <div class="tf-option true"><input type="radio" name="q44" value="B" id="q44b"><label for="q44b">BENAR</label></div>
+                        <div class="tf-option false"><input type="radio" name="q44" value="S" id="q44s"><label for="q44s">SALAH</label></div>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-header">
+                        <div class="question-text"><span class="question-number">45.</span> The Reorientation part of Recount Text tells about the sequence of events.</div>
+                        <span class="points-badge">2 POIN</span>
+                    </div>
+                    <div class="true-false-options">
+                        <div class="tf-option true"><input type="radio" name="q45" value="B" id="q45b"><label for="q45b">BENAR</label></div>
+                        <div class="tf-option false"><input type="radio" name="q45" value="S" id="q45s"><label for="q45s">SALAH</label></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Part D: Matching (5 soal) -->
+        <div class="content-section">
+            <h3 class="section-title"><i class="fas fa-link"></i> Bagian D: Menjodohkan</h3>
+            <div class="section-desc">
+                Pasangkan pernyataan di kolom kiri dengan jawaban yang tepat di kolom kanan! (5 soal × 1 poin = 5 poin)
+            </div>
+            <div class="instruction-box">
+                <h4><i class="fas fa-info-circle"></i> Petunjuk:</h4>
+                <ul>
+                    <li>Pilih jawaban dari dropdown yang tersedia di kolom kanan</li>
+                    <li>Setiap soal bernilai 1 poin</li>
+                    <li>Total skor Bagian D: 5 poin</li>
+                </ul>
+            </div>
+
+            <div class="matching-container">
+                <div class="matching-column">
+                    <h4 style="color: var(--accent-gold); margin-bottom: 1rem; font-size: 0.95rem;">Pernyataan</h4>
+                    <div class="matching-item"><div class="matching-number">1</div><div class="matching-text">Past form of "go"</div></div>
+                    <div class="matching-item"><div class="matching-number">2</div><div class="matching-text">Part of Narrative Text that tells about the problem</div></div>
+                    <div class="matching-item"><div class="matching-number">3</div><div class="matching-text">Moral value of "The Ant and The Dove"</div></div>
+                    <div class="matching-item"><div class="matching-number">4</div><div class="matching-text">To be for "They" in Simple Past Tense</div></div>
+                    <div class="matching-item"><div class="matching-number">5</div><div class="matching-text">Opening phrase of a fairytale</div></div>
+                </div>
+
+                <div class="matching-column">
+                    <h4 style="color: var(--accent-gold); margin-bottom: 1rem; font-size: 0.95rem;">Pilihan Jawaban</h4>
+                    <div class="matching-item">
+                        <div class="matching-number">A</div>
+                        <select class="matching-select" id="matchA" name="match1">
+                            <option value="">Pilih Jawaban</option>
+                            <option value="1">went</option>
+                            <option value="2">Complication</option>
+                            <option value="3">One good turn deserves another</option>
+                            <option value="4">were</option>
+                            <option value="5">Once upon a time</option>
+                        </select>
+                    </div>
+                    <div class="matching-item">
+                        <div class="matching-number">B</div>
+                        <select class="matching-select" id="matchB" name="match2">
+                            <option value="">Pilih Jawaban</option>
+                            <option value="1">went</option>
+                            <option value="2">Complication</option>
+                            <option value="3">One good turn deserves another</option>
+                            <option value="4">were</option>
+                            <option value="5">Once upon a time</option>
+                        </select>
+                    </div>
+                    <div class="matching-item">
+                        <div class="matching-number">C</div>
+                        <select class="matching-select" id="matchC" name="match3">
+                            <option value="">Pilih Jawaban</option>
+                            <option value="1">went</option>
+                            <option value="2">Complication</option>
+                            <option value="3">One good turn deserves another</option>
+                            <option value="4">were</option>
+                            <option value="5">Once upon a time</option>
+                        </select>
+                    </div>
+                    <div class="matching-item">
+                        <div class="matching-number">D</div>
+                        <select class="matching-select" id="matchD" name="match4">
+                            <option value="">Pilih Jawaban</option>
+                            <option value="1">went</option>
+                            <option value="2">Complication</option>
+                            <option value="3">One good turn deserves another</option>
+                            <option value="4">were</option>
+                            <option value="5">Once upon a time</option>
+                        </select>
+                    </div>
+                    <div class="matching-item">
+                        <div class="matching-number">E</div>
+                        <select class="matching-select" id="matchE" name="match5">
+                            <option value="">Pilih Jawaban</option>
+                            <option value="1">went</option>
+                            <option value="2">Complication</option>
+                            <option value="3">One good turn deserves another</option>
+                            <option value="4">were</option>
+                            <option value="5">Once upon a time</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Box -->
+        <div class="results-box" id="resultsBox">
+            <h2 class="results-title">🏆 Ujian Selesai!</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1rem;">Berikut adalah hasil ujian Anda:</p>
+            
+            <div class="score-display" id="finalScore">0</div>
+            <p style="color: var(--text-muted); font-size: 1.1rem;">dari 100 poin</p>
+            
+            <div class="score-breakdown">
+                <div class="score-item">
+                    <div class="score-label">Bagian A: Pilihan Ganda</div>
+                    <div class="score-value" id="scoreA">0 / 70</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-label">Bagian B: Pilihan Ganda Kompleks</div>
+                    <div class="score-value" id="scoreB">0 / 15</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-label">Bagian C: Benar/Salah</div>
+                    <div class="score-value" id="scoreC">0 / 10</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-label">Bagian D: Menjodohkan</div>
+                    <div class="score-value" id="scoreD">0 / 5</div>
+                </div>
+            </div>
+            
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 1.5rem;">
+                <i class="fas fa-info-circle"></i> Hasil ini bersifat sementara. Nilai akhir akan ditentukan oleh guru setelah evaluasi.
+            </p>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculateScore()">
+                <i class="fas fa-check-circle"></i> Kirim Jawaban & Lihat Hasil
+            </button>
+            <button type="button" class="btn btn-secondary" onclick="downloadTXT()">
+                <i class="fas fa-file-download"></i> Unduh Skor (TXT)
+            </button>
+            <button type="button" class="btn btn-secondary" onclick="window.print()">
+                <i class="fas fa-file-pdf"></i> Unduh PDF Lengkap
+            </button>
+            <button type="button" class="btn btn-secondary" onclick="sendEmail()">
+                <i class="fas fa-envelope"></i> Kirim ke Email Guru
+            </button>
+            <button type="button" class="btn btn-danger" onclick="resetQuiz()">
+                <i class="fas fa-redo"></i> Mulai Ulang
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="exam-footer">
+        <div class="footer-links">
+            <a href="13.html"><i class="fas fa-arrow-left"></i> Kembali ke Pertemuan 13</a>
+            <a href="index.html">📖 Daftar Isi Buku</a>
+            <a href="index.html">🏠 Halaman Utama</a>
+        </div>
+        <p>&copy; 2026 Yuni Rahmi, S.Pd — MTsN 10 Agam. Hak Cipta Dilindungi Undang-Undang.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+            Email: <a href="mailto:umiayafatihatha@gmail.com" style="color: var(--accent-gold); text-decoration: none;">umiayafatihatha@gmail.com</a>
+        </p>
+    </footer>
+
+    <!-- JavaScript for Quiz Functionality -->
+    <script>
+        // Kunci Jawaban
+        const correctAnswers = {
+            // Bagian A: Pilihan Ganda (1-35)
+            q1: 'A', q2: 'B', q3: 'C', q4: 'C', q5: 'B',
+            q6: 'B', q7: 'C', q8: 'B', q9: 'C', q10: 'B',
+            q11: 'B', q12: 'C', q13: 'C', q14: 'B', q15: 'B',
+            q16: 'C', q17: 'C', q18: 'B', q19: 'B', q20: 'D',
+            q21: 'C', q22: 'B', q23: 'C', q24: 'B', q25: 'C',
+            q26: 'C', q27: 'C', q28: 'B', q29: 'C', q30: 'B',
+            q31: 'B', q32: 'B', q33: 'B', q34: 'B', q35: 'C',
+            
+            // Bagian B: Pilihan Ganda Kompleks (36-40)
+            q36: ['A', 'C', 'E'],
+            q37: ['A', 'B', 'C'],
+            q38: ['A', 'B', 'D'],
+            q39: ['A', 'C', 'E'],
+            q40: ['A', 'C', 'E'],
+            
+            // Bagian C: Benar/Salah (41-45)
+            q41: 'B', q42: 'S', q43: 'S', q44: 'B', q45: 'S',
+            
+            // Bagian D: Menjodohkan
+            match1: '1', match2: '2', match3: '3', match4: '4', match5: '5'
+        };
+
+        let currentScore = 0;
+        let scoreBreakdown = { A: 0, B: 0, C: 0, D: 0 };
+
+        // Update Progress Bar
+        function updateProgress() {
+            let answered = 0;
+            const totalQuestions = 50;
+            
+            for (let i = 1; i <= 35; i++) {
+                if (document.querySelector(`input[name="q${i}"]:checked`)) answered++;
+            }
+            for (let i = 36; i <= 40; i++) {
+                const checked = document.querySelectorAll(`input[name="q${i}"]:checked`);
+                if (checked.length > 0) answered++;
+            }
+            for (let i = 41; i <= 45; i++) {
+                if (document.querySelector(`input[name="q${i}"]:checked`)) answered++;
+            }
+            for (let i = 1; i <= 5; i++) {
+                if (document.querySelector(`select[name="match${i}"]`).value) answered++;
+            }
+            
+            const percentage = (answered / totalQuestions) * 100;
+            document.getElementById('progressFill').style.width = percentage + '%';
+            document.getElementById('progressText').textContent = `${answered}/${totalQuestions} Soal Terjawab`;
+        }
+
+        document.addEventListener('change', updateProgress);
+
+        function calculateScore() {
+            const name = document.getElementById('studentName').value;
+            const nis = document.getElementById('studentNIS').value;
+            const kelas = document.getElementById('studentClass').value;
+            
+            if (!name || !nis || !kelas) {
+                alert('Harap lengkapi Identitas Siswa (Nama, NIS, dan Kelas) sebelum mengirim jawaban!');
+                return;
+            }
+
+            let scoreA = 0; // 35 soal × 2 poin = 70
+            let scoreB = 0; // 5 soal × 3 poin = 15
+            let scoreC = 0; // 5 soal × 2 poin = 10
+            let scoreD = 0; // 5 soal × 1 poin = 5
+
+            // Hitung Bagian A
+            for (let i = 1; i <= 35; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected && selected.value === correctAnswers[`q${i}`]) {
+                    scoreA += 2;
+                }
+            }
+
+            // Hitung Bagian B
+            for (let i = 36; i <= 40; i++) {
+                const selected = Array.from(document.querySelectorAll(`input[name="q${i}"]:checked`)).map(cb => cb.value);
+                const correct = correctAnswers[`q${i}`];
+                if (selected.length === correct.length && selected.every(val => correct.includes(val))) {
+                    scoreB += 3;
+                }
+            }
+
+            // Hitung Bagian C
+            for (let i = 41; i <= 45; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected && selected.value === correctAnswers[`q${i}`]) {
+                    scoreC += 2;
+                }
+            }
+
+            // Hitung Bagian D
+            for (let i = 1; i <= 5; i++) {
+                const selected = document.querySelector(`select[name="match${i}"]`).value;
+                if (selected === correctAnswers[`match${i}`]) {
+                    scoreD += 1;
+                }
+            }
+
+            currentScore = scoreA + scoreB + scoreC + scoreD;
+            scoreBreakdown = { A: scoreA, B: scoreB, C: scoreC, D: scoreD };
+            
+            document.getElementById('scoreA').textContent = `${scoreA} / 70`;
+            document.getElementById('scoreB').textContent = `${scoreB} / 15`;
+            document.getElementById('scoreC').textContent = `${scoreC} / 10`;
+            document.getElementById('scoreD').textContent = `${scoreD} / 5`;
+            document.getElementById('finalScore').textContent = currentScore;
+            document.getElementById('resultsBox').classList.add('active');
+            
+            document.getElementById('resultsBox').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            let message = '';
+            if (currentScore >= 85) message = 'Luar Biasa! 🌟';
+            else if (currentScore >= 70) message = 'Bagus! 👍';
+            else if (currentScore >= 60) message = 'Cukup Baik 👌';
+            else message = 'Terus Belajar! 💪';
+            
+            alert(`Selamat, ${name}!\n\nSkor UAS Anda: ${currentScore}/100\n${message}\n\nDetail:\n- Bagian A: ${scoreA}/70\n- Bagian B: ${scoreB}/15\n- Bagian C: ${scoreC}/10\n- Bagian D: ${scoreD}/5`);
+        }
+
+        function downloadTXT() {
+            const name = document.getElementById('studentName').value || 'Nama_Siswa';
+            const nis = document.getElementById('studentNIS').value || 'NIS';
+            const kelas = document.getElementById('studentClass').value || 'Kelas';
+            
+            let content = `HASIL UJIAN AKHIR SEMESTER - BAHASA INGGRIS KELAS VIII\n`;
+            content += `===================================================\n`;
+            content += `Nama  : ${name}\n`;
+            content += `NIS   : ${nis}\n`;
+            content += `Kelas : ${kelas}\n`;
+            content += `===================================================\n\n`;
+            content += `DETAIL NILAI:\n`;
+            content += `Bagian A (Pilihan Ganda)          : ${scoreBreakdown.A}/70\n`;
+            content += `Bagian B (Pilihan Ganda Kompleks) : ${scoreBreakdown.B}/15\n`;
+            content += `Bagian C (Benar/Salah)            : ${scoreBreakdown.C}/10\n`;
+            content += `Bagian D (Menjodohkan)            : ${scoreBreakdown.D}/5\n`;
+            content += `---------------------------------------------------\n`;
+            content += `TOTAL NILAI                       : ${currentScore}/100\n`;
+            content += `===================================================\n`;
+            
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Nilai_UAS_${name.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function sendEmail() {
+            const name = document.getElementById('studentName').value || 'Siswa';
+            const nis = document.getElementById('studentNIS').value || '-';
+            const kelas = document.getElementById('studentClass').value || '-';
+            
+            let body = `Yth. Ibu Yuni Rahmi, S.Pd,\n\n`;
+            body += `Berikut adalah hasil Ujian Akhir Semester saya:\n\n`;
+            body += `Nama : ${name}\nNIS : ${nis}\nKelas : ${kelas}\n\n`;
+            body += `DETAIL NILAI:\n`;
+            body += `Bagian A (Pilihan Ganda)          : ${scoreBreakdown.A}/70\n`;
+            body += `Bagian B (Pilihan Ganda Kompleks) : ${scoreBreakdown.B}/15\n`;
+            body += `Bagian C (Benar/Salah)            : ${scoreBreakdown.C}/10\n`;
+            body += `Bagian D (Menjodohkan)            : ${scoreBreakdown.D}/5\n`;
+            body += `---------------------------------------------------\n`;
+            body += `TOTAL NILAI                       : ${currentScore}/100\n\n`;
+            body += `Terima kasih.`;
+            
+            const subject = `Hasil UAS Bahasa Inggris - ${name} - ${kelas}`;
+            const mailtoLink = `mailto:umiayafatihatha@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            window.location.href = mailtoLink;
+        }
+
+        function resetQuiz() {
+            if (confirm('Apakah Anda yakin ingin mengulang ujian ini? Semua jawaban yang telah diisi akan hilang.')) {
+                document.querySelectorAll('input[type="radio"]').forEach(radio => radio.checked = false);
+                document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => checkbox.checked = false);
+                document.querySelectorAll('select').forEach(select => select.value = '');
+                
+                document.getElementById('resultsBox').classList.remove('active');
+                
+                currentScore = 0;
+                scoreBreakdown = { A: 0, B: 0, C: 0, D: 0 };
+                
+                document.getElementById('progressFill').style.width = '0%';
+                document.getElementById('progressText').textContent = '0/50 Soal Terjawab';
+                
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
