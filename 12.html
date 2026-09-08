@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 12: Narrative Text / Folktale — "The Wise Man" (Speaking) | Bahasa Inggris Kelas VIII</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #0f172a;
+            --primary-light: #1e293b;
+            --accent-gold: #d4af37;
+            --accent-gold-light: #f3e5ab;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+            --glass-bg: rgba(30, 41, 59, 0.8);
+            --success: #10b981;
+            --danger: #ef4444;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+
+        /* Navigation */
+        .top-nav {
+            background: var(--primary-light);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-links a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links a:hover { color: var(--accent-gold-light); transform: translateX(3px); }
+        .nav-center { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--text-light); }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        /* Header Section */
+        .chapter-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: var(--glass-bg);
+            border-radius: 16px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .chapter-icon { font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 1rem; }
+        .chapter-label { color: var(--accent-gold); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 0.85rem; }
+        .chapter-title { font-size: 2.2rem; margin: 0.5rem 0 1rem; background: linear-gradient(to right, #fff, #d4af37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .chapter-desc { color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1rem; }
+
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .author-box i { color: var(--accent-gold); }
+        .author-box span { font-weight: 600; color: var(--text-light); }
+        .author-box small { color: var(--text-muted); display: block; font-weight: 400; }
+
+        /* Content Sections */
+        .content-section {
+            background: var(--primary-light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .speaking-script {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 1.5rem;
+            border-radius: 8px;
+            color: var(--text-light);
+            border: 1px dashed rgba(212, 175, 55, 0.3);
+            margin: 1rem 0;
+            line-height: 1.9;
+        }
+
+        .speaking-script p { margin-bottom: 1rem; }
+        .speaking-script p:last-child { margin-bottom: 0; }
+
+        .speaker { color: var(--accent-gold); font-weight: 700; }
+        .stage-direction { color: var(--text-muted); font-style: italic; font-size: 0.9rem; }
+        .emphasis { color: var(--accent-gold-light); font-weight: 600; }
+
+        .structure-box {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 3px solid var(--accent-gold);
+        }
+
+        .structure-item {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed rgba(255,255,255,0.1);
+        }
+
+        .structure-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        .structure-name { color: var(--accent-gold); font-weight: 700; font-size: 1.05rem; margin-bottom: 0.25rem; }
+        .structure-desc { color: var(--text-muted); font-size: 0.95rem; }
+
+        .highlight-box {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--accent-gold);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .speaking-tips {
+            background: rgba(212, 175, 55, 0.05);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-gold);
+            margin: 1rem 0;
+        }
+
+        .speaking-tips h4 { color: var(--accent-gold); margin-bottom: 0.75rem; }
+        .speaking-tips ul { margin-left: 1.5rem; color: var(--text-muted); }
+        .speaking-tips li { margin-bottom: 0.5rem; }
+
+        .key-terms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .term-tag {
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--accent-gold);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Islamic Quote */
+        .islamic-quote {
+            text-align: center;
+            padding: 2rem;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), transparent);
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .arabic-text { font-family: 'Traditional Arabic', serif; font-size: 1.8rem; color: var(--accent-gold); margin-bottom: 0.5rem; direction: rtl; }
+        .quote-translation { color: var(--text-muted); font-style: italic; font-size: 0.95rem; }
+        .quote-source { color: var(--accent-gold); font-weight: 600; font-size: 0.85rem; margin-top: 0.5rem; }
+
+        /* Quiz Section */
+        .quiz-section {
+            background: var(--primary-light);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            margin-top: 3rem;
+        }
+
+        .quiz-header { text-align: center; margin-bottom: 2rem; }
+        .quiz-header h2 { color: var(--text-light); font-size: 1.8rem; margin-bottom: 0.5rem; }
+        .quiz-meta { display: flex; justify-content: center; gap: 1.5rem; color: var(--text-muted); font-size: 0.9rem; flex-wrap: wrap; }
+
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; color: var(--accent-gold); font-weight: 600; font-size: 0.9rem; }
+        .form-control {
+            width: 100%;
+            padding: 0.875rem;
+            background: var(--primary-dark);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            color: var(--text-light);
+            font-family: 'Montserrat', sans-serif;
+            transition: var(--transition);
+        }
+        .form-control:focus { outline: none; border-color: var(--accent-gold); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+        select.form-control { cursor: pointer; }
+
+        .question-block {
+            background: var(--primary-dark);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .question-text { font-weight: 600; margin-bottom: 1rem; color: var(--text-light); font-size: 1.05rem; }
+        .points-badge { float: right; background: var(--accent-gold); color: var(--primary-dark); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; }
+
+        .options label {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--text-muted);
+        }
+
+        .options label:hover { background: rgba(212, 175, 55, 0.05); color: var(--text-light); }
+        .options input[type="radio"] { margin-top: 0.25rem; accent-color: var(--accent-gold); }
+
+        textarea.form-control { min-height: 100px; resize: vertical; }
+
+        /* Results Box */
+        .results-box {
+            background: rgba(15, 23, 42, 0.8);
+            border: 2px solid var(--accent-gold);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            display: none;
+        }
+
+        .results-box.active { display: block; animation: fadeIn 0.5s ease; }
+        .score-display { font-size: 3rem; font-family: 'Playfair Display', serif; color: var(--accent-gold); font-weight: 700; margin: 1rem 0; }
+        .score-details { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; color: var(--text-muted); flex-wrap: wrap; }
+
+        /* Buttons */
+        .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 2rem; }
+        .btn {
+            padding: 0.875rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        .btn-primary { background: var(--accent-gold); color: var(--primary-dark); }
+        .btn-primary:hover { background: var(--accent-gold-light); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); }
+        .btn-secondary { background: transparent; border: 1px solid var(--accent-gold); color: var(--accent-gold); }
+        .btn-secondary:hover { background: rgba(212, 175, 55, 0.1); }
+        .btn-danger { background: var(--danger); color: white; }
+        .btn-danger:hover { background: #dc2626; }
+
+        /* Footer */
+        .chapter-footer {
+            text-align: center;
+            padding: 3rem 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin-top: 4rem;
+            color: var(--text-muted);
+        }
+        .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .footer-links a { color: var(--accent-gold); text-decoration: none; font-weight: 500; transition: var(--transition); }
+        .footer-links a:hover { color: var(--accent-gold-light); }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        @media (max-width: 768px) {
+            .top-nav { flex-direction: column; gap: 1rem; text-align: center; }
+            .chapter-title { font-size: 1.8rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-links">
+            <a href="11.html"><i class="fas fa-arrow-left"></i> Pertemuan 11</a>
+        </div>
+        <div class="nav-center">Bahasa Inggris Kelas VIII</div>
+        <div class="nav-links">
+            <a href="13.html">Pertemuan 13 <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Chapter Header -->
+        <header class="chapter-header">
+            <div class="chapter-icon">🗣️</div>
+            <div class="chapter-label">— Pertemuan Dua Belas —</div>
+            <h1 class="chapter-title">Narrative Text / Folktale</h1>
+            <p class="chapter-desc">
+                Mengembangkan keterampilan <em>Speaking</em> melalui cerita rakyat (<em>folktale</em>) klasik 
+                <strong>"The Wise Man"</strong>. Mempraktikkan dialog, pelafalan (<em>pronunciation</em>), 
+                intonasi, dan teknik bercerita lisan (<em>storytelling</em>) dengan ekspresi yang tepat.
+            </p>
+            <div class="author-box">
+                <div>
+                    <i class="fas fa-chalkboard-teacher"></i> <span>Yuni Rahmi, S.Pd</span>
+                    <small>MTsN 10 Agam</small>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content Section A: Pengertian Folktale -->
+        <section class="content-section">
+            <h3 class="section-title"><i class="fas fa-book-open"></i> A. Pengertian Folktale</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                <strong style="color: var(--text-light);">Folktale</strong> (cerita rakyat) adalah jenis Narrative Text yang diwariskan secara lisan dari generasi ke generasi dalam suatu masyarakat. Cerita ini sering kali anonim (tidak diketahui penulis aslinya) dan mengandung nilai-nilai budaya, kearifan lokal, atau pelajaran moral yang universal.
+            </p>
+            <div class="highlight-box">
+                <h4 style="color: var(--accent-gold); margin-bottom: 0.5rem;">📌 Ciri-Ciri Folktale</h4>
+                <ul style="margin-left: 1.5rem; color: var(--text-muted);">
+                    <li>Dimulai dengan frasa pembuka klasik seperti <em>"Once upon a time..."</em> atau <em>"Long ago..."</em></li>
+                    <li>Tokohnya bisa berupa manusia biasa, raja, atau tokoh bijaksana (<em>wise man</em>).</li>
+                    <li>Berisi pesan moral atau kearifan hidup yang mendalam.</li>
+                    <li>Alur cerita sederhana namun penuh makna.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Content Section B: Simulasi Dialog Speaking -->
+        <section class="content-section">
+            <h3 class="section-title"><i class="fas fa-comments"></i> B. Simulasi Dialog Speaking: "The Wise Man"</h3>
+            <p style="margin-bottom: 1rem; color: var(--text-muted);">
+                <em>Praktikkan dialog berikut bersama teman sebangku Anda. Satu orang berperan sebagai <strong>Narrator</strong>, satu sebagai <strong>Wise Man</strong>, dan satu sebagai <strong>Young Man</strong>. Perhatikan intonasi dan ekspresi emosi!</em>
+            </p>
+            <div class="speaking-script">
+                <p><span class="stage-direction">[Scene 1: In the village — The Young Man complains to the Wise Man]</span></p>
+                <p><span class="speaker">Narrator:</span> "Once upon a time, in a peaceful village, lived an old wise man. Everyone respected him for his calmness and wisdom. One day, a young man came to him, looking very angry and frustrated."</p>
+                <p><span class="speaker">Young Man:</span> <span class="stage-direction">(complaining loudly)</span> "Life is so hard! I have so much pain and trouble. I can't take it anymore!"</p>
+                <p><span class="speaker">Wise Man:</span> <span class="stage-direction">(calmly)</span> "I understand your pain, my son. Let me teach you a lesson. Please go to the kitchen and bring me a handful of salt and a glass of water."</p>
+                <p><span class="stage-direction">[The young man brings the salt and water]</span></p>
+                <p><span class="speaker">Wise Man:</span> "Now, put the salt into the glass of water and drink it. How does it taste?"</p>
+                <p><span class="speaker">Young Man:</span> <span class="stage-direction">(spitting it out)</span> "It tastes bitter and very salty! It's awful!"</p>
+                
+                <p style="margin-top: 1.5rem;"><span class="stage-direction">[Scene 2: By the lake]</span></p>
+                <p><span class="speaker">Narrator:</span> "The wise man smiled gently and asked the young man to follow him to a nearby large lake."</p>
+                <p><span class="speaker">Wise Man:</span> "Now, throw another handful of salt into this lake, and then drink the water from the lake. How does it taste?"</p>
+                <p><span class="speaker">Young Man:</span> <span class="stage-direction">(drinking and smiling)</span> "It tastes fresh and cool. It's delicious!"</p>
+                <p><span class="speaker">Wise Man:</span> "Did you taste the salt this time?"</p>
+                <p><span class="speaker">Young Man:</span> "No, I didn't."</p>
+                <p><span class="speaker">Wise Man:</span> <span class="stage-direction">(wisely)</span> "The pain in life is like pure salt. The amount of pain remains the same, but the bitterness depends on the container. So, stop being a glass. Become a lake."</p>
+                <p><span class="speaker">Narrator:</span> "The young man finally understood. He bowed respectfully and went home with a peaceful heart."</p>
+            </div>
+        </section>
+
+        <!-- Content Section C: Speaking Tips -->
+        <section class="content-section">
+            <h3 class="section-title"><i class="fas fa-microphone"></i> C. Tips Speaking untuk Folktale</h3>
+            <div class="speaking-tips">
+                <h4>📌 Tips for Speaking a Folktale Story</h4>
+                <ul>
+                    <li><strong>Master the pacing</strong> — Gunakan tempo yang lambat dan tenang saat menjadi "Wise Man", dan tempo yang lebih cepat/emosional saat menjadi "Young Man".</li>
+                    <li><strong>Use appropriate facial expressions</strong> — Tunjukkan ekspresi frustrasi, tenang, terkejut, dan akhirnya lega/paham.</li>
+                    <li><strong>Emphasize key words</strong> — Tekankan kata-kata penting seperti <em class="emphasis">"bitter"</em>, <em class="emphasis">"fresh"</em>, dan <em class="emphasis">"become a lake"</em>.</li>
+                    <li><strong>Use hand gestures</strong> — Gunakan gerakan tangan untuk memperagakan tindakan (misalnya: menabur garam, minum air).</li>
+                    <li><strong>Maintain eye contact</strong> — Tatap lawan bicara atau audiens untuk menyampaikan pesan moral dengan lebih menyentuh.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Content Section D: Useful Expressions -->
+        <section class="content-section">
+            <h3 class="section-title"><i class="fas fa-comment-dots"></i> D. Useful Expressions</h3>
+            <div class="highlight-box">
+                <h4 style="color: var(--accent-gold); margin-bottom: 0.5rem;">💬 Expressions for Complaining and Advising</h4>
+                <ul style="margin-left: 1.5rem; color: var(--text-muted);">
+                    <li><strong>Complaining:</strong> "Life is so hard!" / "I can't take it anymore!" / "I have so many problems."</li>
+                    <li><strong>Asking for advice:</strong> "What should I do?" / "Can you help me with this?"</li>
+                    <li><strong>Giving advice (Wisely):</strong> "Let me teach you a lesson." / "You should broaden your mind." / "Try to look at it from a different perspective."</li>
+                    <li><strong>Expressing realization:</strong> "Now I understand." / "That makes sense." / "Thank you for the wisdom."</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Content Section E: Vocabulary -->
+        <section class="content-section">
+            <h3 class="section-title"><i class="fas fa-spell-check"></i> E. Kosakata Penting (Key Vocabulary)</h3>
+            <div class="highlight-box">
+                <table style="width: 100%; color: var(--text-muted); line-height: 2;">
+                    <tr>
+                        <td><strong style="color: var(--accent-gold);">Wise</strong></td>
+                        <td>/waɪz/</td>
+                        <td>— Bijaksana</td>
+                    </tr>
+                    <tr>
+                        <td><strong style="color: var(--accent-gold);">Frustrated</strong></td>
+                        <td>/ˈfrʌstreɪtɪd/</td>
+                        <td>— Frustrasi / putus asa</td>
+                    </tr>
+                    <tr>
+                        <td><strong style="color: var(--accent-gold);">Handful</strong></td>
+                        <td>/ˈhændfʊl/</td>
+                        <td>— Segenggam</td>
+                    </tr>
+                    <tr>
+                        <td><strong style="color: var(--accent-gold);">Bitter</strong></td>
+                        <td>/ˈbɪtər/</td>
+                        <td>— Pahit</td>
+                    </tr>
+                    <tr>
+                        <td><strong style="color: var(--accent-gold);">Gently</strong></td>
+                        <td>/ˈdʒentli/</td>
+                        <td>— Dengan lembut</td>
+                    </tr>
+                    <tr>
+                        <td><strong style="color: var(--accent-gold);">Container</strong></td>
+                        <td>/kənˈteɪnər/</td>
+                        <td>— Wadah</td>
+                    </tr>
+                    <tr>
+                        <td><strong style="color: var(--accent-gold);">Respectfully</strong></td>
+                        <td>/rɪˈspektfəli/</td>
+                        <td>— Dengan penuh hormat</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Islamic Quote -->
+        <div class="islamic-quote">
+            <div class="arabic-text">يُؤْتِي الْحِكْمَةَ مَن يَشَاءُ ۚ وَمَن يُؤْتَ الْحِكْمَةَ فَقَدْ أُوتِيَ خَيْرًا كَثِيرًا</div>
+            <div class="quote-translation">"Allah menganugerahkan hikmah (kebijaksanaan) kepada siapa yang Dia kehendaki. Dan barangsiapa dianugerahi hikmah, ia benar-benar telah dianugerahi kebajikan yang banyak."</div>
+            <div class="quote-source">— QS. Al-Baqarah [2]: 269</div>
+        </div>
+
+        <!-- Key Terms -->
+        <section class="content-section">
+            <h3 class="section-title"><i class="fas fa-tags"></i> Kata Kunci Bab Ini</h3>
+            <div class="key-terms">
+                <span class="term-tag">Narrative Text</span>
+                <span class="term-tag">Folktale</span>
+                <span class="term-tag">Speaking</span>
+                <span class="term-tag">Role Play</span>
+                <span class="term-tag">Wisdom</span>
+                <span class="term-tag">Pacing</span>
+                <span class="term-tag">Facial Expression</span>
+                <span class="term-tag">Moral Value</span>
+                <span class="term-tag">Perspective</span>
+            </div>
+        </section>
+
+        <!-- Formative Test Section -->
+        <section class="quiz-section" id="quizSection">
+            <div class="quiz-header">
+                <h2>📝 Uji Formatif Pertemuan 12</h2>
+                <p style="color: var(--text-muted);">Speaking & Pronunciation: Narrative Text / Folktale — "The Wise Man"</p>
+                <div class="quiz-meta">
+                    <span><i class="fas fa-list-ol"></i> Bagian A: 10 Soal (10 poin/soal)</span>
+                    <span><i class="fas fa-pen-fancy"></i> Bagian B: 5 Soal (20 poin/soal)</span>
+                </div>
+            </div>
+
+            <form id="quizForm">
+                <!-- Identitas -->
+                <div class="content-section" style="border-left-color: var(--text-muted);">
+                    <h3 class="section-title" style="font-size: 1.2rem;"><i class="fas fa-id-card"></i> Identitas Siswa</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div class="form-group">
+                            <label>Nama Lengkap *</label>
+                            <input type="text" id="studentName" class="form-control" required placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div class="form-group">
+                            <label>No. Absen / NIS *</label>
+                            <input type="text" id="studentNIS" class="form-control" required placeholder="Contoh: 12345">
+                        </div>
+                        <div class="form-group">
+                            <label>Kelas *</label>
+                            <select id="studentClass" class="form-control" required>
+                                <option value="">Pilih Kelas</option>
+                                <option value="VIII-A">VIII-A</option>
+                                <option value="VIII-B">VIII-B</option>
+                                <option value="VIII-C">VIII-C</option>
+                                <option value="VIII-D">VIII-D</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Semester *</label>
+                            <select id="studentSemester" class="form-control" required>
+                                <option value="1 (Ganjil)">1 (Ganjil)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <h3 style="color: var(--accent-gold); margin: 2rem 0 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">📋 Bagian A: Pilihan Ganda</h3>
+
+                <div id="mcqContainer">
+                    <!-- Soal 1 -->
+                    <div class="question-block">
+                        <div class="question-text">1. What type of text is "The Wise Man"? <span class="points-badge">10 POIN</span></div>
+                        <div class="options">
+                            <label><input type="radio" name="q1" value="A"> A. Recount Text</label>
+                            <label><input type="radio" name="q1" value="B"> B. Descriptive Text</label>
+                            <label><input type="radio" name="q1" value="C"> C. Narrative Text / Folktale</label>
+                            <label><input type="radio" name="q1" value="D"> D. Procedure Text</label>
+                        </div>
+                    </div>
+
+                    <!-- Soal 2 -->
+                    <div class="question-block">
+                        <div class="question-text">2. Who are the main characters in the story? <span class="points-badge">10 POIN</span></div>
+                        <div class="options">
+                            <label><input type="radio" name="q2" value="A"> A. A king and a queen</label>
+                            <label><input type="radio" name="q2" value="B"> B. A wise man and a young man</label>
+                            <label><input type="radio" name="q2" value="C"> C. Two brothers</label>
+                            <label><input type="radio" name="q2" value="D"> D. A teacher and a student</label>
+                        </div>
+                    </div>
+
+                    <!-- Soal 3 -->
+                    <div class="question-block">
+                        <div class="question-text">3. Why did the young man come to the wise man? <span class="points-badge">10 POIN</span></div>
+                        <div class="options">
+                            <label><input type="radio" name="q3" value="A"> A. To ask for money</label>
+                            <label><input type="radio" name="q3" value="B"> B. To complain about his pain and troubles in life</label>
+                            <label><input type="radio" name="q3" value="C"> C. To challenge the wise man</label>
+                            <label><input type="radio" name="q3" value="D"> D. To deliver a message</label>
+                        </div>
+                    </div>
+
+                    <!-- Soal 4 -->
+                    <div class="question-block">
+                        <div class="question-text">4. What did the wise man ask the young man to do first? <span class="points-badge">10 POIN</span></div>
+                        <div class="options">
+                            <label><input type="radio" name="q4" value="A"> A. Put salt in a glass of water and drink it</label>
+                            <label><input type="radio" name="q4" value="B"> B. Throw salt into the lake</label>
+                            <label><input type="radio" name="q4" value="C"> C. Clean the kitchen</label>
+                            <label><input type="radio" name="q4" value="D"> D. Meditate for an hour</label>
+                        </div>
+                    </div>
+
+                    <!-- Soal 5 -->
+                    <div class="question-block">
+                        <div class="question-text">5. How did the water in the glass taste? <span class="points-badge">10 POIN</span></div>
+                        <div class="options">
+                            <label><input type="radio" name="q5" value="A"> A. Sweet and fresh</label>
+                            <label><input type="radio" name="q5" value="B"> B. Bitter and very salty</label>
+                            <label><input type="radio" name="q5" value="C"> C. Tasteless</label>
+                            <label><input type="radio" name="q5" value="D"> D. Cold and delicious</label>
+                        </div>
+                    </div>
+
+                    <!-- Soal 6 -->
+                    <div class="question-block">
+                        <div class="question-text">6. What happened when the young man threw salt into the lake? <span class="points-badge">10 POIN</span></div>
+                        <div class="options">
+                            <label><input type="radio" name="q6" value="A"> A. The lake became very salty</label>
+                            <label><input type="radio" name="q6" value="B"> B. The water tasted fresh and cool, and he couldn't taste the salt</label>
+                            <label><input type="radio" name="q6" value="C"> C. The fish in the lake died</label>
+                            <label><input type="radio" name="q6" value="D"> D. The wise man got angry</label>
+                        </div>
+                    </div>
+
+                    <!-- Soal 7 -->
+                    <div class="question-block">
+                        <div class="question-text">7. What is the moral value of the story? <span class="points-badge">10 POIN</span></div>
+                        <div class="options">
+                            <label><input type="radio" name="q7" value="A"> A. Always drink water from a lake, not a glass</label>
+                            <label><input type="radio" name="q7" value="B"> B. Salt is bad for your health</label>
+                            <label><input type="radio" name="q7" value="C"> C. Broaden your mind and heart (become a lake) to handle life's problems, don't be narrow-minded (like a glass)</label>
+                            <label><input type="radio" name="q7" value="D"> D. Never complain to old people</label>
+                        </div>
+                    </div>
+
+                    <!-- Soal 8 -->
+                    <div class="question-block">
+                        <div class="question-text">8. "Life is so hard!" This sentence is an expression of... <span class="points-badge">10 POIN</span></div>
+                        <div class="options">
+                            <label><input type="radio" name="q8" value="A"> A. Giving advice</label>
+                            <label><input type="radio" name="q8" value="B"> B. Complaining</label>
+                            <label><input type="radio" name="q8" value="C"> C. Apologizing</label>
+                            <label><input type="radio" name="q8" value="D"> D. Thanking</label>
+                        </div>
+                    </div>
+
+                    <!-- Soal 9 -->
+                    <div class="question-block">
+                        <div class="question-text">9. What is the synonym of the word "bitter" in the context of the story? <span class="points-badge">10 POIN</span></div>
+                        <div class="options">
+                            <label><input type="radio" name="q9" value="A"> A. Sweet</label>
+                            <label><input type="radio" name="q9" value="B"> B. Salty and unpleasant</label>
+                            <label><input type="radio" name="q9" value="C"> C. Fresh</label>
+                            <label><input type="radio" name="q9" value="D"> D. Delicious</label>
+                        </div>
+                    </div>
+
+                    <!-- Soal 10 -->
+                    <div class="question-block">
+                        <div class="question-text">10. Which of the following is a good tip for speaking a folktale? <span class="points-badge">10 POIN</span></div>
+                        <div class="options">
+                            <label><input type="radio" name="q10" value="A"> A. Speak in a monotone voice without expression</label>
+                            <label><input type="radio" name="q10" value="B"> B. Read the text while looking down at the paper</label>
+                            <label><input type="radio" name="q10" value="C"> C. Use different pacing and facial expressions for different characters</label>
+                            <label><input type="radio" name="q10" value="D"> D. Speak as fast as possible to finish quickly</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <h3 style="color: var(--accent-gold); margin: 2rem 0 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">✍️ Bagian B: Essay</h3>
+
+                <div class="question-block">
+                    <div class="question-text">Essay 1: Mention and explain the generic structures of the text "The Wise Man"! Provide one example sentence from the text for each structure! <span class="points-badge">20 POIN</span></div>
+                    <textarea class="form-control" name="essay1" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-text">Essay 2: What is a folktale? Mention 3 (three) characteristics of a folktale and explain why "The Wise Man" is classified as a folktale! <span class="points-badge">20 POIN</span></div>
+                    <textarea class="form-control" name="essay2" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-text">Essay 3: Create a short dialogue (4-6 lines) between the wise man and the young man at the lake, using expressions of asking for and giving advice! <span class="points-badge">20 POIN</span></div>
+                    <textarea class="form-control" name="essay3" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-text">Essay 4: Explain the moral value of "The Wise Man" in your own words! How can you apply this moral value when you face a difficult problem or failure at school? <span class="points-badge">20 POIN</span></div>
+                    <textarea class="form-control" name="essay4" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <div class="question-block">
+                    <div class="question-text">Essay 5: Mention 5 (five) vocabulary words from the speaking script and write their meanings in Indonesian! <span class="points-badge">20 POIN</span></div>
+                    <textarea class="form-control" name="essay5" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                </div>
+
+                <!-- Results Box -->
+                <div class="results-box" id="resultsBox">
+                    <h3 style="color: var(--text-light);">📊 Hasil Uji Formatif</h3>
+                    <div class="score-details">
+                        <div>📋 Pilihan Ganda<br><strong id="mcqScore" style="color: var(--accent-gold); font-size: 1.2rem;">0</strong> / 100</div>
+                        <div>✍️ Essay<br><strong style="color: var(--text-muted); font-size: 1.2rem;">Menunggu Review Guru</strong></div>
+                    </div>
+                    <div class="score-display" id="finalScore">0</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">*Skor akhir sementara berdasarkan Bagian A (Pilihan Ganda). Bagian B akan dinilai oleh guru.</p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary" onclick="calculateScore()">
+                        <i class="fas fa-check-circle"></i> Kirim Jawaban & Lihat Hasil
+                    </button>
+                    <button type="button" class="btn btn-secondary" onclick="downloadTXT()">
+                        <i class="fas fa-file-download"></i> Unduh Skor (TXT)
+                    </button>
+                    <button type="button" class="btn btn-secondary" onclick="window.print()">
+                        <i class="fas fa-file-pdf"></i> Unduh PDF Lengkap
+                    </button>
+                    <button type="button" class="btn btn-secondary" onclick="sendEmail()">
+                        <i class="fas fa-envelope"></i> Kirim ke Email Guru
+                    </button>
+                    <button type="button" class="btn btn-danger" onclick="resetQuiz()">
+                        <i class="fas fa-redo"></i> Mulai Ulang
+                    </button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="chapter-footer">
+        <div class="footer-links">
+            <a href="11.html"><i class="fas fa-arrow-left"></i> Sebelumnya: Pertemuan 11</a>
+            <a href="index.html">📖 Daftar Isi Buku</a>
+            <a href="13.html">Selanjutnya: Pertemuan 13 <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <p>&copy; 2026 Yuni Rahmi, S.Pd — MTsN 10 Agam. Hak Cipta Dilindungi Undang-Undang.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+            Email: <a href="mailto:umiayafatihatha@gmail.com" style="color: var(--accent-gold); text-decoration: none;">umiayafatihatha@gmail.com</a>
+        </p>
+    </footer>
+
+    <!-- JavaScript for Quiz Functionality -->
+    <script>
+        // Kunci Jawaban Pilihan Ganda (Pertemuan 12)
+        const correctAnswers = {
+            q1: 'C', q2: 'B', q3: 'B', q4: 'A', q5: 'B',
+            q6: 'B', q7: 'C', q8: 'B', q9: 'B', q10: 'C'
+        };
+
+        let currentScore = 0;
+
+        function calculateScore() {
+            const name = document.getElementById('studentName').value;
+            const nis = document.getElementById('studentNIS').value;
+            const kelas = document.getElementById('studentClass').value;
+
+            if (!name || !nis || !kelas) {
+                alert('Harap lengkapi Identitas Siswa (Nama, NIS, dan Kelas) sebelum mengirim jawaban!');
+                return;
+            }
+
+            let mcqScore = 0;
+            let answeredCount = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected) {
+                    answeredCount++;
+                    if (selected.value === correctAnswers[`q${i}`]) {
+                        mcqScore += 10;
+                    }
+                }
+            }
+
+            if (answeredCount < 10) {
+                const confirmSubmit = confirm(`Anda baru menjawab ${answeredCount} dari 10 soal pilihan ganda. Yakin ingin mengumpulkan?`);
+                if (!confirmSubmit) return;
+            }
+
+            currentScore = mcqScore;
+
+            document.getElementById('mcqScore').textContent = mcqScore;
+            document.getElementById('finalScore').textContent = mcqScore;
+            document.getElementById('resultsBox').classList.add('active');
+
+            document.getElementById('resultsBox').scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            alert(`Terima kasih, ${name}! Jawaban Pilihan Ganda Anda telah dinilai. Skor sementara: ${mcqScore}/100. Jawaban Essay akan direview oleh guru.`);
+        }
+
+        function downloadTXT() {
+            const name = document.getElementById('studentName').value || 'Nama_Siswa';
+            const nis = document.getElementById('studentNIS').value || 'NIS';
+            const kelas = document.getElementById('studentClass').value || 'Kelas';
+
+            let content = `HASIL UJI FORMATIF - BAHASA INGGRIS KELAS VIII\n`;
+            content += `Pertemuan 12: Narrative Text / Folktale — "The Wise Man" (Speaking)\n`;
+            content += `===================================================\n`;
+            content += `Nama  : ${name}\n`;
+            content += `NIS   : ${nis}\n`;
+            content += `Kelas : ${kelas}\n`;
+            content += `Skor Pilihan Ganda : ${currentScore}/100\n`;
+            content += `===================================================\n\n`;
+
+            content += `JAWABAN ESSAY:\n`;
+            for (let i = 1; i <= 5; i++) {
+                const essayAns = document.querySelector(`textarea[name="essay${i}"]`).value || 'Tidak dijawab';
+                content += `Essay ${i}:\n${essayAns}\n\n`;
+            }
+
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Skor_UjiFormatif_12_${name.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function sendEmail() {
+            const name = document.getElementById('studentName').value || 'Siswa';
+            const nis = document.getElementById('studentNIS').value || '-';
+            const kelas = document.getElementById('studentClass').value || '-';
+
+            let body = `Yth. Ibu Yuni Rahmi, S.Pd,\n\nBerikut adalah hasil Uji Formatif Pertemuan 12 saya:\n\n`;
+            body += `Nama : ${name}\nNIS : ${nis}\nKelas : ${kelas}\n`;
+            body += `Skor Pilihan Ganda : ${currentScore}/100\n\n`;
+            body += `Jawaban Essay:\n`;
+
+            for (let i = 1; i <= 5; i++) {
+                const essayAns = document.querySelector(`textarea[name="essay${i}"]`).value || 'Tidak dijawab';
+                body += `Essay ${i}: ${essayAns}\n`;
+            }
+
+            body += `\nTerima kasih.`;
+
+            const subject = `Hasil Uji Formatif Pertemuan 12 - ${name} - ${kelas}`;
+            const mailtoLink = `mailto:umiayafatihatha@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            window.location.href = mailtoLink;
+        }
+
+        function resetQuiz() {
+            if (confirm('Apakah Anda yakin ingin mengulang ujian ini? Semua jawaban yang telah diisi akan hilang.')) {
+                document.getElementById('quizForm').reset();
+                document.getElementById('resultsBox').classList.remove('active');
+                currentScore = 0;
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
